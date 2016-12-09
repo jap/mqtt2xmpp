@@ -21,7 +21,7 @@ def main():
 
     xmppc = MQTT2XMPP(config['xmpp']['jid'], config['xmpp']['passwd'])
     xmppc.register_plugin('xep_0030') # Service Discovery
-    xmpp.register_plugin('xep_0199')  # XMPP ping
+    xmppc.register_plugin('xep_0199')  # XMPP ping
     xmppc.connect()
 
     config['xmpp-client'] = xmppc
